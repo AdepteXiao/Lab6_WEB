@@ -1,14 +1,6 @@
-// console.log("Введите последовательность чисел через пробел:");
-// let numbers = [];
-// let input = "";
-// while (input !== "stop") {
-//     input = prompt("Введите число или 'stop', чтобы закончить ввод:");
-//     if (input !== "stop") {
-//         numbers.push(Number(input));
-//     }
-// }
-// console.log(numbers);
-document.getElementById("button").addEventListener("click", function calculate() {
+let button = document.getElementById("button")
+button.addEventListener("click", (ev) => {
+    // button.preventDefault();
     let input = document.getElementById("input").value.split(" ").filter((x) => (x !== "")).map(Number);
     let sum = document.getElementById("sum");
     let min = document.getElementById("min");
@@ -19,9 +11,7 @@ document.getElementById("button").addEventListener("click", function calculate()
     let getMax = ((inp) => (Math.max(...inp)))
     let getSubstr = ((inp) => (getMax(inp) - getMin(inp)))
 
-    sum.innerText = getSum(input).toString()
-    min.innerText = getMin(input).toString()
-    substr.innerText = getSubstr(input).toString()
-
-    return false;
+    sum.textContent = getSum(input).toString()
+    min.textContent = getMin(input).toString()
+    substr.textContent = getSubstr(input).toString()
 })
