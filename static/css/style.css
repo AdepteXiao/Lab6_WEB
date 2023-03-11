@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    background-color: #EEEEEE;
+}
+
+nav {
+    background-color: #222831;
+}
+
+.form-group {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    background-color: #00ADB5;
+
+}
+
+.info {
+    background-color: #393E46;
+}
+
+.my_button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    border-radius: 10px
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    outline: 0;
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-height: none;
+    animation: modal-show 0.5s ease-in-out;
+}
+
+.modal-lg {
+    max-width: 80%;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1060;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+@keyframes modal-show {
+    from {
+        transform: scale(0) rotate3d(0, 0, 1, 0deg);
+    }
+    to {
+        transform: scale(1) rotate3d(5, 3, 2, 360deg);
+    }
+}
+
+
+/*.img_td {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
